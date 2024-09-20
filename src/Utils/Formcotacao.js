@@ -1,11 +1,10 @@
-// src/Utils/Formcotacao.js
 import React, { useState } from 'react';
 import TextField from '../components/TextField';
 import Button from '../components/Button';
 import './Formcotacao.css';
 
 const Formcotacao = ({ onAddCotacao }) => {
-  const [cotacao, setCotacao] = useState({ produto: '', data: '', preco: '' });
+  const [cotacao, setCotacao] = useState({ produto: '', data: '', preco: '', cnpj: '' });
 
   const handleChange = (e) => {
     setCotacao({ ...cotacao, [e.target.name]: e.target.value });
@@ -13,10 +12,10 @@ const Formcotacao = ({ onAddCotacao }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (cotacao.produto && cotacao.data && cotacao.preco) {
+    if (cotacao.produto && cotacao.data && cotacao.preco && cotacao.cnpj) {
       console.log('Cadastrando cotação:', cotacao); 
       onAddCotacao(cotacao);
-      setCotacao({ produto: '', data: '', preco: '' });
+      setCotacao({ produto: '', data: '', preco: '', cnpj: '' });
     } else {
       alert('Por favor, preencha todos os campos.');
     }
@@ -46,7 +45,14 @@ const Formcotacao = ({ onAddCotacao }) => {
         onChange={handleChange}
         required
       />
-      <Button type="submit" text="Cadastrar Cotação" onClick={handleSubmit}/> 
+      <TextField
+        name="cnpj"
+        label="CNPJ do Fornecedor"
+        value={cotacao.cnpj}
+        onChange={handleChange}
+        required
+      />
+        <Button type="submit" text="Cadastrar Cotação" onClick={handleSubmit}/> 
     </form>
   );
 };
