@@ -1,0 +1,24 @@
+/* src/styles/Home.css */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
+    background-size: cover;
+}
+
+.home-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.8); 
+    margin: 1rem;
+    border-radius: 8px;
+}
+
+.home-content > * {
+    margin: 1rem 0;
+}

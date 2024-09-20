@@ -1,0 +1,10 @@
+/* Navbar.css */
+.navbar {
+    background-color: #008932 !important; /* Define a cor de fundo personalizada */
+}
+
+.navbar-title {
+    flex-grow: 1; /* Para empurrar os botões para a direita */
+    text-align: left; 
+
+}

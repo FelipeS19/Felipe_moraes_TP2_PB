@@ -1,0 +1,19 @@
+/* Formfornecedor.css */
+
+form{
+    width: 80%; /* Largura de 50% */
+    margin: 20px auto; /* Centraliza o formulário */
+    padding: 10px; /* Ajuste o espaçamento interno */
+    background-color: #fff; /* Fundo branco */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+.form-cotacao-container{
+    display: flex;
+    flex-direction: row;
+    width: 70%; 
+    gap: 10px;
+    margin: 20px auto; 
+}
+
+
